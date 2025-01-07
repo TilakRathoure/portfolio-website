@@ -1,10 +1,10 @@
 'use client';
 
-import { MdArrowOutward, MdDarkMode } from "react-icons/md";
 import Image from "next/image";
-import image1 from "../../assets/header-bg-color.png";
-import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
+import { MdArrowOutward, MdDarkMode } from "react-icons/md";
+import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
+import image1 from "../../assets/header-bg-color.png";
 
 interface header {
   title: string;
@@ -27,14 +27,14 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="relative flex justify-between items-center px-12 py-4 z-60">
+      <div className="relative flex justify-between md:justify-around items-center py-8 z-60">
         <Image
           src={image1}
           alt="bg-color"
           className="fixed -z-10 translate-y-[-30%]"
         />
 
-        <div className="relative text-3xl text-center">
+        <div className="relative text-3xl text-center w-[25%] font-medium">
           Tilak
           <span className="absolute bottom-0 text-5xl text-red-600">.</span>
         </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
 
 
 
-        <div className="flex justify-center items-center gap-5 sm:gap-1 md:gap-5">
+        <div className="flex justify-center items-center gap-5 sm:gap-1 md:gap-5 w-[25%]">
         <MdDarkMode size={30} className="cursor-pointer" />
         <RxHamburgerMenu onClick={()=>Setside(prev=>!prev)} size={30} className="sm:hidden cursor-pointer" />
         <div className="hidden bg-white sm:flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 ">
