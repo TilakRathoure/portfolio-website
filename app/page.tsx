@@ -7,6 +7,8 @@ const page = () => {
     <div  className='px-12'>
     <Navbar/>
     <Header/>
+    <Header/>
+    <Header/>
     </div>
   )
 }
