@@ -54,11 +54,7 @@ const Navbar = () => {
           {Header.map((e, i) => (
             <a href={e.href}
               key={i}
-              className={`px-4 py-2 text-lg ${
-                i !== Header.length - 1
-                  ? "border-r-[3px] border-r-gray-100"
-                  : "pr-6"
-              } ${i==0? "pl-6":""}`}
+              className={`px-4 py-2 text-lg ${i==0? "pl-6":""}`}
             >
               <li>{e.title}</li>
             </a>

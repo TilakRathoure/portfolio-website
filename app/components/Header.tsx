@@ -24,11 +24,11 @@ const Header = () => {
       </div>
 
       <div className="flex justify-center p-7 gap-6">
-      <span className="flex bg-black text-white items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 w-[] ">
+      <span className="flex bg-black text-white items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap">
         connect with me
         <MdArrowOutward />
       </span>
-      <span className=" bg-white flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 w-[] ">
+      <span className=" bg-white flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap">
         my resume
         <MdArrowOutward />
       </span>

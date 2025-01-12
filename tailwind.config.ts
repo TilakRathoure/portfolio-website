@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily:{
-        outfit:["Outfit","sans"]
+        outfit:["Outfit","sans-serif"]
       }
     },
   },
