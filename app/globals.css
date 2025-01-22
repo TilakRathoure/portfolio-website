@@ -5,5 +5,14 @@
 *{
 
   font-family: Outfit;
+  scroll-behavior: smooth;
+}
 
+#home,#skills,#projects,#education,#contact{
+  scroll-margin-top: 100px;
+}
+
+
+input:focus, textarea:focus {
+  outline: none;
 }

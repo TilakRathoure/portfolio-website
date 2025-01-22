@@ -24,7 +24,7 @@ const Education = () => {
   ];
 
   return (
-    <div>
+    <div id="education" className="mt-5" >
       <h1 className="text-[22px] py-3">Education</h1>
       <div className="flex flex-col gap-6">
         {educationDetails.map((edu, index) => (
@@ -34,7 +34,7 @@ const Education = () => {
               className="h-[45px] w-[37px]"
               alt={edu.alt}
             />
-            <div className="relative">
+            <div className="relative w-full">
               <p className="absolute top-0 right-0 font-extralight text-gray-700">{edu.duration}</p>
               <p className="text-lg">{edu.institution}</p>
               <span className="font-extralight">{edu.description} </span>

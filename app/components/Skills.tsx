@@ -25,7 +25,7 @@ const Skills = () => {
   ];
 
   return (
-    <div>
+    <div className="m-4" id="skills">
       <h1 className="text-2xl mb-3">Skills</h1>
       <div className="flex flex-wrap gap-6">
         {skills.map((skill, index) => (

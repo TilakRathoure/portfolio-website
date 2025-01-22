@@ -13,10 +13,9 @@ interface header {
 
 const Header: header[] = [
   { title: "Home", href: "#home" },
-  { title: "About", href: "#about" },
   { title: "Skills", href: "#skills" },
-  { title: "Projects", href: "#home" },
-  { title: "Home1", href: "#home" },
+  { title: "Projects", href: "#projects" },
+  { title: "Education", href: "#education" },
 ];
 
 const Navbar = () => {
@@ -62,16 +61,18 @@ const Navbar = () => {
         </ul>
 
         <div className="flex justify-center items-center gap-5 sm:gap-1 md:gap-5 w-[25%]">
-          <MdDarkMode size={30} className="cursor-pointer" />
+          <MdDarkMode size={30} className="cursor-pointer hidden" />
           <RxHamburgerMenu
             onClick={() => Setside((prev) => !prev)}
             size={30}
             className="sm:hidden cursor-pointer"
           />
+          <a href="#contact">
           <div className="hidden bg-white sm:flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 ">
             Contact
             <MdArrowOutward />
           </div>
+          </a>
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import ezshiksha from "../../assets/shiksha.png";
 import cryptify from "../../assets/crypto.png";
 import Image, { StaticImageData } from "next/image";
 import python from "../../assets/cosmic.png";
+import shop from "../../assets/ShopHere.png"
 
 const Projects = () => {
   interface Projects {
@@ -18,82 +19,85 @@ const Projects = () => {
 
   const projects: Projects[] = [
     {
-      name: "EzShiksha",
+      name: "ShopHere",
       about:
-        "EzShiksha is transforming education with AI-powered solutions: instant math help, concise notes, and text extraction. Empowering students to learn efficiently, collaborate effectively, and access education universally.",
-      date: "March 2024",
-      code: "https://github.com/TilakRathoure/EzShiksha",
-      link: "/",
-      image: ezshiksha,
+        "Shophere is a full-featured MERN stack e-commerce platform with an intuitive admin dashboard, Firebase authentication, Stripe payment integration, and real-time analytics.",
+      date: "January 2025",
+      code: "https://github.com/TilakRathoure/ShopHere-ecommerce",
+      link: "https://shopheremern.netlify.app/",
+      image: shop,
       tech: [
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
+        { name: "Typescript" },
+        { name: "React" },
+        { name: "Firebase" },
+        {name:"Stripe"},
+        { name: "MongoDB" },
       ],
     },
     {
       name: "EzShiksha",
       about:
         "EzShiksha is transforming education with AI-powered solutions: instant math help, concise notes, and text extraction. Empowering students to learn efficiently, collaborate effectively, and access education universally.",
-      date: "March 2024",
+      date: "September 2024",
       code: "https://github.com/TilakRathoure/EzShiksha",
-      link: "/",
+      link: "https://github.com/TilakRathoure/EzShiksha",
+      image:ezshiksha,
+      tech: [
+        { name: "React" },
+        { name: "MongoDB" },
+        { name: "ExpressJs" },
+        { name: "Nodejs" },
+      ],
+    },
+    {
+      name: "Cryptify",
+      about:
+        "Cryptify is a React-powered platform offering crypto trading insights, real-time updates, exchange comparisons, and interactive charts for informed decisions.",
+      date: "April 2024",
+      code: "https://github.com/TilakRathoure/Cryptify",
+      link: "https://tilakrathoure.github.io/Cryptify/",
       image: cryptify,
       tech: [
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
+        { name: "React" },
+        { name: "Javascript" },
+        { name: "TailwindCss" },
       ],
     },
     {
-      name: "EzShiksha",
+      name: "Cosmic-Conquest",
       about:
-        "EzShiksha is transforming education with AI-powered solutions: instant math help, concise notes, and text extraction. Empowering students to learn efficiently, collaborate effectively, and access education universally.",
+        "Cosmic Conquest is a fun Python game built with Pygame, where players defend Earth from aliens using a rocket launcher.",
       date: "March 2024",
-      code: "https://github.com/TilakRathoure/EzShiksha",
-      link: "/",
+      code: "https://github.com/TilakRathoure/Cosmic-Conquest",
+      link: "https://github.com/TilakRathoure/Cosmic-Conquest",
       image: python,
       tech: [
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
-      ],
-    },
-    {
-      name: "EzShiksha",
-      about:
-        "EzShiksha is transforming education with AI-powered solutions: instant math help, concise notes, and text extraction. Empowering students to learn efficiently, collaborate effectively, and access education universally.",
-      date: "March 2024",
-      code: "https://github.com/TilakRathoure/EzShiksha",
-      link: "/",
-      image: ezshiksha,
-      tech: [
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
-        { name: "ExpressJs" },
+        { name: "Python" },
+        { name: "pygame" },
       ],
     },
   ];
 
   return (
-    <div>
-      <h1 className="text-[20px] flex items-center gap-5 text-center">
+    <div id="projects" className="mt-10">
+      <h1 className="text-[20px] flex items-center gap-5 text-center mb-4">
         Projects{" "}
         <span>
+          <a href="https://github.com/TilakRathoure">
           <FaGithubSquare />
+          </a>
         </span>
       </h1>
-      <div className="flex gap-4 mb-0 flex-wrap w-full">
+      <div className="flex justify-center gap-5 mb-0 flex-wrap w-full">
         {projects.map((e, i) => (
-          <a key={i} href={e.link} className="shadow-lg rounded-lg w-full sm:w-[48%]">
+          <a key={i} href={e.link} className="shadow-lg rounded-lg w-full sm:w-[48%] pb-2 max-w-[421px]">
             <Image
               src={e.image}
-              className="w-full h-1/2 object-cover rounded-lg"
+              className="w-full h-1/2 object-cover lg:object-top rounded-lg"
               alt="projects"
             />
-            <div className="w-full h-1/2 sm:h-auto p-3">
-              <p>{e.name}</p>
-              <p>{e.date}</p>
+            <div className="flex flex-col gap-3 w-full h-1/2 sm:h-auto p-3">
+              <h1 className="relative">{e.name}<p className="absolute right-0 top-0 font-extralight">{e.date}</p></h1>
               <p className="font-light">{e.about}</p>
               <div className="flex gap-2 flex-wrap">
                 {e.tech.map((e, i) => (
