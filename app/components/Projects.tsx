@@ -93,10 +93,10 @@ const Projects = () => {
           <a key={i} href={e.link} className="shadow-lg rounded-lg w-full sm:w-[48%] pb-2 max-w-[421px]">
             <Image
               src={e.image}
-              className="w-full h-1/2 object-cover lg:object-top rounded-lg"
+              className="w-full object-cover lg:object-top rounded-lg"
               alt="projects"
             />
-            <div className="flex flex-col gap-3 w-full h-1/2 sm:h-auto p-3">
+            <div className="flex flex-col gap-3 w-full p-3">
               <h1 className="relative">{e.name}<p className="absolute right-0 top-0 font-extralight">{e.date}</p></h1>
               <p className="font-light">{e.about}</p>
               <div className="flex gap-2 flex-wrap">

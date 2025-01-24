@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
 }
 
-#home,#skills,#projects,#education,#contact{
+#home,#skills,#projects,#education,#contact,#experience{
   scroll-margin-top: 100px;
 }
 

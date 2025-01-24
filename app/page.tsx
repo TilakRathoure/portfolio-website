@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import Experience from "./components/Experience";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <div className="px-4 sm:px-12 xl:px-[200px]">
         <Navbar />
         <Header />
+        <Experience/>
         <Skills />
         <Projects />
         <Education />

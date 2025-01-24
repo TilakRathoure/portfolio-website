@@ -13,6 +13,7 @@ interface header {
 
 const Header: header[] = [
   { title: "Home", href: "#home" },
+  {title:"Experience", href:"#experience"},
   { title: "Skills", href: "#skills" },
   { title: "Projects", href: "#projects" },
   { title: "Education", href: "#education" },
@@ -55,12 +56,12 @@ const Navbar = () => {
               key={i}
               className={`px-4 py-2 text-lg ${i==0? "pl-6":""}`}
             >
-              <li>{e.title}</li>
+              <li className="text-nowrap">{e.title}</li>
             </a>
           ))}
         </ul>
 
-        <div className="flex justify-center items-center gap-5 sm:gap-1 md:gap-5 w-[25%]">
+        <div className="flex justify-end sm:justify-center items-center gap-5 sm:gap-1 md:gap-5 w-[25%]">
           <MdDarkMode size={30} className="cursor-pointer hidden" />
           <RxHamburgerMenu
             onClick={() => Setside((prev) => !prev)}
@@ -83,13 +84,13 @@ const Navbar = () => {
       >
         <RxCross2
           onClick={() => Setside((prev) => !prev)}
-          className="absolute top-4 right-9 cursor-pointer"
+          className="absolute top-6 right-4 cursor-pointer"
           size={40}
         />
 
         {Header.map((e, i) => (
           <li key={i} className="m-4 cursor-pointer w-1/2 text-center">
-            <a href={e.href} className="text-xl">
+            <a href={e.href} className="text-xl text-nowrap">
               {e.title}
             </a>
           </li>
