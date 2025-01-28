@@ -13,7 +13,7 @@ interface header {
 
 const Header: header[] = [
   { title: "Home", href: "#home" },
-  {title:"Experience", href:"#experience"},
+  { title: "Experience", href: "#experience" },
   { title: "Skills", href: "#skills" },
   { title: "Projects", href: "#projects" },
   { title: "Education", href: "#education" },
@@ -52,9 +52,10 @@ const Navbar = () => {
 
         <ul className="hidden bg-white sm:flex justify-between items-center shadow-md rounded-3xl">
           {Header.map((e, i) => (
-            <a href={e.href}
+            <a
+              href={e.href}
               key={i}
-              className={`px-4 py-2 text-lg ${i==0? "pl-6":""}`}
+              className={`px-4 py-2 text-lg ${i == 0 ? "pl-6" : ""}`}
             >
               <li className="text-nowrap">{e.title}</li>
             </a>
@@ -69,10 +70,10 @@ const Navbar = () => {
             className="sm:hidden cursor-pointer"
           />
           <a href="#contact">
-          <div className="hidden bg-white sm:flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 ">
-            Contact
-            <MdArrowOutward />
-          </div>
+            <div className="hidden bg-white sm:flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 ">
+              Contact
+              <MdArrowOutward />
+            </div>
           </a>
         </div>
       </div>
@@ -88,13 +89,28 @@ const Navbar = () => {
           size={40}
         />
 
-        {Header.map((e, i) => (
-          <li key={i} className="m-4 cursor-pointer w-1/2 text-center">
-            <a href={e.href} className="text-xl text-nowrap">
-              {e.title}
-            </a>
-          </li>
-        ))}
+        {Header.map((e, i) =>
+          i != Header.length - 1 ? (
+            <li key={i} className="m-4 cursor-pointer w-1/2 text-center">
+              <a href={e.href} className="text-xl text-nowrap">
+                {e.title}
+              </a>
+            </li>
+          ) : (
+            <>
+              <li className="m-4 cursor-pointer w-1/2 text-center">
+                <a href={e.href} className="text-xl text-nowrap">
+                  {e.title}
+                </a>
+              </li>
+              <li className="m-4 cursor-pointer w-1/2 text-center">
+                <a href="#contact" className="text-xl text-nowrap">
+                  Contact Me
+                </a>
+              </li>
+            </>
+          )
+        )}
       </ul>
     </nav>
   );
