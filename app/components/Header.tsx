@@ -2,13 +2,18 @@ import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 import image1 from "../../assets/1692212262791-removebg-preview-removebg-preview.png";
 import { HiDownload } from "react-icons/hi";
+import { useContext } from "react";
+import { Contextfirst } from "../page";
 
 const Header = () => {
+
+  const {mode}=useContext(Contextfirst);
+
   return (
     <div>
       <div
         id="home"
-        className="z-20 flex justify-center gap-3 py-6 items-center mt-[15vh]"
+        className={`z-20 flex justify-center gap-3 py-6 items-center ${mode!=="dark"?"mt-[15vh]":""}`}
       >
         <div className="max-w-[525px]">
           <p className="text-2xl sm:text-3xl font-light text-nowrap">
@@ -46,7 +51,7 @@ const Header = () => {
           </span>
         </a>
         <a target="_blank" href="https://drive.google.com/file/d/1STLCrOAIpk96kzMoHscCJ82bgyPeI_Ca/view?usp=drive_link">
-          <span className=" bg-white flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap">
+          <span className={`${mode==="dark"? "bg-black" :"bg-white" } flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap`}>
             my resume
             <HiDownload />
           </span>

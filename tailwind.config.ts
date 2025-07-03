@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,10 +13,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily:{
-        outfit:["Outfit","sans-serif"]
-      }
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"],
+      },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;

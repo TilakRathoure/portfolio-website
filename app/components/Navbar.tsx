@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { MdArrowOutward, MdDarkMode } from "react-icons/md";
+import { useContext, useEffect, useState } from "react";
+import { MdArrowOutward, MdDarkMode,MdOutlineDarkMode } from "react-icons/md";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import image1 from "../../assets/header-bg-color.png";
+import {Contextfirst } from "../page";
 
 interface header {
   title: string;
@@ -20,6 +21,8 @@ const Header: header[] = [
 ];
 
 const Navbar = () => {
+
+  const {mode,Setmode}=useContext(Contextfirst);
   const [side, Setside] = useState<boolean>(false);
   const [scroll, Setscroll] = useState<boolean>(false);
 
@@ -35,11 +38,17 @@ const Navbar = () => {
 
   return (
     <nav>
-      <Image
+      {
+        mode=="dark"? (<div className="h-[15vh] bg-black">
+        </div>):(
+        <Image
         src={image1}
         alt="bg-color"
         className="fixed -z-20 h-[40vh] -translate-y-[250px]"
       />
+
+        )
+      }
       <div
         className={`fixed w-full z-50 top-0 ${
           scroll ? "bg-white bg-opacity-50 backdrop-blur-lg" : ""
@@ -50,7 +59,7 @@ const Navbar = () => {
           <span className="absolute bottom-0 text-5xl text-red-600">.</span>
         </div>
 
-        <ul className="hidden bg-white sm:flex justify-between items-center shadow-md rounded-3xl">
+        <ul className={`hidden ${mode==="dark"? "text-white bg-black" : "text-black bg-white"} sm:flex justify-between items-center shadow-md rounded-3xl`}>
           {Header.map((e, i) => (
             <a
               href={e.href}
@@ -63,7 +72,12 @@ const Navbar = () => {
         </ul>
 
         <div className="flex justify-end sm:justify-center items-center gap-5 sm:gap-1 md:gap-5 w-[25%]">
-          <MdDarkMode size={30} className="cursor-pointer hidden" />
+
+          <div className="cursor-pointer" onClick={()=>Setmode((prev)=>prev==="light"? "dark":"light")}>
+                      {
+            mode!=="light"? (<MdDarkMode size={30} />):(<MdOutlineDarkMode  size={30}/>)
+          }
+          </div>
           <RxHamburgerMenu
             onClick={() => Setside((prev) => !prev)}
             size={30}
@@ -81,7 +95,7 @@ const Navbar = () => {
       <ul
         className={`fixed ${
           side ? "right-0" : "-right-[100%]"
-        } top-0 w-[75vw] h-[100vh] sm:hidden z-50 bg-white p-12 shadow-lg transition-all duration-500`}
+        } ${mode==="dark"? "text-white bg-black" : "text-black bg-white"} top-0 w-[75vw] h-[100vh] sm:hidden z-50 p-12 shadow-lg transition-all duration-500`}
       >
         <RxCross2
           onClick={() => Setside((prev) => !prev)}
