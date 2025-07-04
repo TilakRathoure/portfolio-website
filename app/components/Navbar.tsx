@@ -75,7 +75,7 @@ const Navbar = () => {
 
           <div className="cursor-pointer" onClick={()=>Setmode((prev)=>prev==="light"? "dark":"light")}>
                       {
-            mode!=="light"? (<MdDarkMode size={30} />):(<MdOutlineDarkMode  size={30}/>)
+            mode=="light"? (<MdDarkMode size={30} />):(<MdOutlineDarkMode  size={30}/>)
           }
           </div>
           <RxHamburgerMenu
@@ -84,7 +84,7 @@ const Navbar = () => {
             className="sm:hidden cursor-pointer"
           />
           <a href="#contact">
-            <div className="hidden bg-white sm:flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 ">
+            <div className={`${mode==="dark"? "bg-black":"bg-white"} hidden sm:flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 `}>
               Contact
               <MdArrowOutward />
             </div>

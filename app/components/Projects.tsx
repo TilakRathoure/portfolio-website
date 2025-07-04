@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import ezshiksha from "../../assets/shiksha.png";
 import cryptify from "../../assets/crypto.png";
 import Image, { StaticImageData } from "next/image";
 import python from "../../assets/cosmic.png";
 import shop from "../../assets/ShopHere.png"
+import { Contextfirst } from "../page";
 
 const Projects = () => {
+
+  const {mode}= useContext(Contextfirst);
   interface Projects {
     name: string;
     about: string;
@@ -101,7 +104,7 @@ const Projects = () => {
               <p className="font-light">{e.about}</p>
               <div className="flex gap-2 flex-wrap">
                 {e.tech.map((e, i) => (
-                  <div key={i} className="text-sm font-extralight rounded-lg px-2  bg-gray-200">
+                  <div key={i} className={`text-sm font-extralight rounded-lg px-2  ${mode!="dark"? "bg-gray-200" :"bg-black"}`}>
                     {e.name}
                   </div>
                 ))}

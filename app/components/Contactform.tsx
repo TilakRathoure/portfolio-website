@@ -1,11 +1,12 @@
 "use client";
 import axios from "axios";
-import React, { FormEvent } from "react";
+import React, { FormEvent, useContext } from "react";
 import { IconType } from "react-icons";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { Contextfirst } from "../page";
 
 type Icon = {
   icon: IconType;
@@ -32,6 +33,9 @@ const icons: Icon[] = [
 ];
 
 const Contactform = () => {
+
+  const {mode}=useContext(Contextfirst);
+
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event: FormEvent) => {
@@ -90,15 +94,18 @@ const Contactform = () => {
         </div>
         Get In Touch
       </h1>
-      <form
+      <form  
         onSubmit={onSubmit}
-        className="relative flex flex-col gap-10 w-full max-w-[670px]"
+        className=" relative flex flex-col gap-10 w-full max-w-[670px]"
       >
         {getintouch.map((e, i) => (
           <div className="relative" key={i}>
             <p className="absolute text-sm mb-3 -top-5 font-normal">
               {e.title}
             </p>
+
+            <div className="text-black">
+
             {e.name !== "message" ? (
               <input
                 className="border-b-[3px] border-black w-full text-base"
@@ -114,6 +121,10 @@ const Contactform = () => {
                 required
               />
             )}
+
+            </div>
+
+
           </div>
         ))}
 
