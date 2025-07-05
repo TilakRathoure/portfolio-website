@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { MdArrowOutward, MdDarkMode,MdOutlineDarkMode } from "react-icons/md";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import image1 from "../../assets/header-bg-color.png";
-import {Contextfirst } from "../page";
+import Contextfirst from "../Theme";
 
 interface header {
   title: string;

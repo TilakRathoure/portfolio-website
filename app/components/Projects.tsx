@@ -5,7 +5,7 @@ import cryptify from "../../assets/crypto.png";
 import Image, { StaticImageData } from "next/image";
 import python from "../../assets/cosmic.png";
 import shop from "../../assets/ShopHere.png"
-import { Contextfirst } from "../page";
+import Contextfirst from "../Theme";
 
 const Projects = () => {
 

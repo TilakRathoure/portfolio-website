@@ -3,7 +3,7 @@ import { MdArrowOutward } from "react-icons/md";
 import image1 from "../../assets/1692212262791-removebg-preview-removebg-preview.png";
 import { HiDownload } from "react-icons/hi";
 import { useContext } from "react";
-import { Contextfirst } from "../page";
+import Contextfirst from "../Theme";
 
 const Header = () => {
 
@@ -45,7 +45,7 @@ const Header = () => {
 
       <div className="flex justify-center p-7 gap-6">
         <a href="#contact">
-          <span className="flex bg-black text-white items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap">
+          <span className={`${mode==="dark"?  "text-black bg-white" :"bg-black text-white" } flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap`}>
             connect with me
             <MdArrowOutward />
           </span>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Contactform from "./components/Contactform";
@@ -9,11 +9,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
-
-export const Contextfirst = createContext<{
-  mode: string;
-  Setmode: React.Dispatch<React.SetStateAction<string>>;
-} | null>(null);
+import Contextfirst from "./Theme";
 
 const Page = () => {
   const [mode, Setmode] = useState<string>("dark");
