@@ -22,7 +22,7 @@ const Header: header[] = [
 
 const Navbar = () => {
 
-  const {mode,Setmode}=useContext(Contextfirst);
+  const {mode,Setmode}=useContext(Contextfirst)!;
   const [side, Setside] = useState<boolean>(false);
   const [scroll, Setscroll] = useState<boolean>(false);
 
@@ -111,8 +111,8 @@ const Navbar = () => {
               </a>
             </li>
           ) : (
-            <>
-              <li className="m-4 cursor-pointer w-1/2 text-center">
+            <div key={i}>
+              <li key={i} className="m-4 cursor-pointer w-1/2 text-center">
                 <a href={e.href} className="text-xl text-nowrap">
                   {e.title}
                 </a>
@@ -122,7 +122,8 @@ const Navbar = () => {
                   Contact Me
                 </a>
               </li>
-            </>
+            </div>
+
           )
         )}
       </ul>

@@ -1,12 +1,11 @@
 "use client";
 import axios from "axios";
-import React, { FormEvent, useContext } from "react";
+import React, { FormEvent } from "react";
 import { IconType } from "react-icons";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { Contextfirst } from "../page";
 
 type Icon = {
   icon: IconType;
@@ -33,8 +32,6 @@ const icons: Icon[] = [
 ];
 
 const Contactform = () => {
-
-  const {mode}=useContext(Contextfirst);
 
   const [result, setResult] = React.useState("");
 

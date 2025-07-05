@@ -9,7 +9,7 @@ import { Contextfirst } from "../page";
 
 const Projects = () => {
 
-  const {mode}= useContext(Contextfirst);
+  const {mode}= useContext(Contextfirst)!;
   interface Projects {
     name: string;
     about: string;

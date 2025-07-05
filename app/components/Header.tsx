@@ -7,7 +7,7 @@ import { Contextfirst } from "../page";
 
 const Header = () => {
 
-  const {mode}=useContext(Contextfirst);
+  const {mode}=useContext(Contextfirst)!;
 
   return (
     <div>
