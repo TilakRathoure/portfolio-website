@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
-import { MdArrowOutward, MdDarkMode,MdOutlineDarkMode } from "react-icons/md";
+import { MdArrowOutward, MdDarkMode } from "react-icons/md";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import image1 from "../../assets/header-bg-color.png";
 import Contextfirst from "../Theme";
@@ -75,7 +75,7 @@ const Navbar = () => {
 
           <div className="cursor-pointer" onClick={()=>Setmode((prev)=>prev==="light"? "dark":"light")}>
                       {
-            mode=="light"? (<MdDarkMode size={30} />):(<MdOutlineDarkMode  size={30}/>)
+            mode=="light"? (<MdDarkMode size={30} />):(<MdDarkMode className="text-white"  size={30}/>)
           }
           </div>
           <RxHamburgerMenu

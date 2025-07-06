@@ -33,7 +33,7 @@ const Experience = () => {
                 alt={edu.alt}
               />
               <div className="relative w-full">
-                <p className="absolute top-0 right-0 font-extralight text-gray-700">
+                <p className="absolute top-0 right-0 font-extralight">
                   {edu.duration}
                 </p>
                 <p className="text-lg">{edu.institution}</p>
