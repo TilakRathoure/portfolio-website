@@ -12,29 +12,31 @@ const Skills = () => {
     color: string; // New color property
   }
 
-  const skills: Skill[] = [
-    { name: "React", icon: FaReact, color: "#61DAFB" },
-    { name: "NodeJS", icon: FaNodeJs, color: "#339933" },
-    { name: "TypeScript", icon: SiTypescript, color: "#007ACC" },
-    { name: "Express.js", icon: SiExpress, color: "#000000" },
-    { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-    { name: "Redux", icon: SiRedux, color: "#764ABC" },
-    { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#38B2AC" },
-    { name: "C++", icon: TbBrandCpp, color: "#00599C" },
-    { name: "Python", icon: FaPython, color: "#3776AB" },
-  ];
+const skills: Skill[] = [
+  { name: "React", icon: FaReact, color: "text-sky-400" },
+  { name: "NodeJS", icon: FaNodeJs, color: "text-green-700" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+  { name: "Express.js", icon: SiExpress, color: "text-gray-900" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+  { name: "Redux", icon: SiRedux, color: "text-purple-600" },
+  { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "text-teal-400" },
+  { name: "C++", icon: TbBrandCpp, color: "text-blue-700" },
+  { name: "Python", icon: FaPython, color: "text-blue-500" },
+];
+
 
   return (
     <div className="m-4" id="skills">
       <h1 className="text-2xl mb-3">Skills</h1>
       <div className="flex flex-wrap gap-6">
         {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <skill.icon size={35} style={{ color: skill.color }} />
+          <div key={index} className={`flex flex-col items-center ${skill.name==="Express.js" && ("dark:text-white")} ${skill.color}`}>
+            <skill.icon size={35}  />
             <p className="font-outfit font-extralight">{skill.name}</p>
           </div>
         ))}
       </div>
+      {/* style={skill.name==="Express.js"?{color: "white"}: { color: skill.color }} */}
     </div>
   );
 };

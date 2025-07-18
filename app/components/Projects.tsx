@@ -35,6 +35,7 @@ const Projects = () => {
         { name: "Firebase" },
         {name:"Stripe"},
         { name: "MongoDB" },
+        {name: "Redux Toolkit"}
       ],
     },
     {
@@ -46,6 +47,7 @@ const Projects = () => {
       link: "https://github.com/TilakRathoure/EzShiksha",
       image:ezshiksha,
       tech: [
+        {name:"Python"},
         { name: "React" },
         { name: "MongoDB" },
         { name: "ExpressJs" },
@@ -104,7 +106,7 @@ const Projects = () => {
               <p className="font-light">{e.about}</p>
               <div className="flex gap-2 flex-wrap">
                 {e.tech.map((e, i) => (
-                  <div key={i} className={`text-sm font-extralight rounded-lg px-2  ${mode!="dark"? "bg-gray-200" :"bg-black"}`}>
+                  <div key={i} className={` text-sm font-extralight rounded-lg px-2  ${mode!="dark"? "bg-gray-200" :"bg-gray-700"}`}>
                     {e.name}
                   </div>
                 ))}

@@ -105,7 +105,7 @@ const Contactform = () => {
 
             {e.name !== "message" ? (
               <input
-                className="border-b-[3px] border-black w-full text-base"
+                className="border-b-[3px] p-1 rounded-lg border-black w-full text-base"
                 name={e.name}
                 type={e.type}
                 required
@@ -113,7 +113,7 @@ const Contactform = () => {
             ) : (
               <textarea
                 name={e.name}
-                className="border-b-[3px] border-black w-full text-base"
+                className="border-b-[3px] rounded-lg p-1 border-black w-full text-base"
                 rows={3}
                 required
               />
@@ -126,7 +126,7 @@ const Contactform = () => {
         ))}
 
         <button
-          className="absolute -bottom-[50px] right-0 bg-black text-white p-3"
+          className={`dark:border-white dark:border-[1px] absolute -bottom-[50px] right-0 bg-black text-white p-3`}
           type="submit"
         >
           Submit Form
