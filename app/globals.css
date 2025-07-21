@@ -16,3 +16,38 @@
 input:focus, textarea:focus {
   outline: none;
 }
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: inherit; /* So it works in both themes */
+}
+
+.underline-hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black; /* default for light mode */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+  left: 0;
+  transform: none;
+}
+
+/* Dark mode specific */
+.underline-hover::after {
+  background-color: black;
+}
+
+.dark .underline-hover::after {
+  background-color: white;
+}
+

@@ -95,7 +95,7 @@ const Projects = () => {
       </h1>
       <div className="flex justify-center gap-5 mb-0 flex-wrap w-full">
         {projects.map((e, i) => (
-          <a key={i} href={e.link} className="shadow-lg rounded-lg w-full sm:w-[48%] pb-2 max-w-[421px]">
+          <a key={i} href={e.link} className={`${mode==="light"? ("") : (" shadow-slate-700")} shadow-lg rounded-lg w-full sm:w-[48%] pb-2 max-w-[421px]`}>
             <Image
               src={e.image}
               className="w-full object-cover lg:object-top rounded-lg"

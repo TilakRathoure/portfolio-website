@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Outfit,Ovo } from "next/font/google";
+import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 
-const OutFit= Outfit({
+const OutFit = Outfit({
   subsets: ["latin"],
-  weight:["100","200","300","400","500"]
+  weight: ["100", "200", "300", "400", "500"],
 });
 
 const OvO = Ovo({
   subsets: ["latin"],
-  weight:"400"
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -24,9 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${OutFit.className} ${OvO.className} antialiased`}
-      >
+      <head>
+        <link rel="icon" type="image/png" href="/letter-t.png" />
+      </head>
+
+      <body className={`${OutFit.className} ${OvO.className} antialiased`}>
         {children}
       </body>
     </html>

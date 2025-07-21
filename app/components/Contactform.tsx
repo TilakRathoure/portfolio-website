@@ -85,7 +85,7 @@ const Contactform = () => {
         <div className="absolute -right-[130px] sm:-right-[170px] top-[50px] flex gap-2">
           {icons.map((e, i) => (
             <a href={e.link} key={i}>
-            <e.icon size={25} />
+            <e.icon size={30} />
             </a>
           ))}
         </div>
@@ -93,7 +93,7 @@ const Contactform = () => {
       </h1>
       <form  
         onSubmit={onSubmit}
-        className=" relative flex flex-col gap-10 w-full max-w-[670px]"
+        className="mt-4 relative flex flex-col gap-10 w-full max-w-[670px]"
       >
         {getintouch.map((e, i) => (
           <div className="relative" key={i}>
