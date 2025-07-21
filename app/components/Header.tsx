@@ -13,15 +13,13 @@ const Header = () => {
     <div>
       <div
         id="home"
-        className={`z-20 flex justify-center gap-3 py-6 items-center ${mode!=="dark"?"mt-[15vh]":""}`}
+        className={`z-20 flex justify-center gap-3 py-6 items-center lg:gap-6 ${mode!=="dark"?"mt-[15vh]":""}`}
       >
         <div className="max-w-[525px]">
-          <p className="text-2xl sm:text-3xl font-light text-nowrap">
+          <p className="text-2xl sm:text-3xl mb-[2px] font-light text-nowrap">
             Hi, I&apos;m Tilak Rathoure
           </p>
-          <p id="about" className=" font-outfit font-extralight text-lg">
-            A passionate full-stack developer creating dynamic and meaningful
-            applications.
+          <p id="about" className=" font-outfit font-extralight text-lg">21 | Full-stack Developer
           </p>
         </div>
         <Image
@@ -33,13 +31,8 @@ const Header = () => {
 
       <div>
         <h1 className="font-normal text-xl">About</h1>
-        <p className="font-extralight text-xl">
-          I&apos;m Tilak Rathoure, a third-year B.Tech student in Computer
-          Science Engineering specializing in Artificial Intelligence. As a{" "}
-          <span className="font-normal">Full-stack Developer</span>, I create
-          dynamic and scalable web applications, leveraging{" "}
-          <span className="font-normal">AI</span> to enhance functionality and
-          user experience.
+        <p className="font-extralight text-lg">
+          Third-year B.Tech CSE (AI) student and <span className=" font-medium">Full-stack Developer</span>, building dynamic web apps with AI-powered features.
         </p>
       </div>
 

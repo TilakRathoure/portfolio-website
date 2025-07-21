@@ -34,6 +34,7 @@ const Navbar = () => {
         Setscroll(false);
       }
     });
+
   }, []);
 
   return (
@@ -51,8 +52,7 @@ const Navbar = () => {
       }
       <div
         className={`fixed w-full z-50 top-0 ${
-          scroll ? "bg-white bg-opacity-50 backdrop-blur-lg" : ""
-        } left-0 h-[15vh] flex justify-between md:justify-around items-center py-8 z-60`}
+          scroll && (`${mode==="light"? ("bg-white"): ("bg-black")} bg-opacity-40 backdrop-blur-lg`)} left-0 h-[15vh] flex justify-between md:justify-around items-center py-8 z-60`}
       >
         <div className="relative text-3xl text-center w-[25%] font-medium">
           Tilak
