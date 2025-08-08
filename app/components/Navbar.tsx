@@ -109,11 +109,11 @@ const Navbar = () => {
       <ul
         className={`fixed ${side ? "right-0" : "-right-[100%]"} ${
           mode === "dark" ? "text-white bg-black" : "text-black bg-white"
-        } top-0 w-[75vw] h-[100vh] sm:hidden z-50 py-[80px] flex flex-col gap-6 pr-9 shadow-lg transition-all duration-500`}
+        } top-0 w-[75vw] h-[100vh] sm:hidden z-50 py-[80px] flex flex-col gap-6 pr-9 shadow-lg transition-all duration-300`}
       >
         <RxCross2
           onClick={() => Setside((prev) => !prev)}
-          className="absolute top-6 right-4 cursor-pointer"
+          className="absolute top-8 right-4 cursor-pointer"
           size={40}
         />
         {Header.map((e, i) => (

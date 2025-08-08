@@ -4,7 +4,7 @@ import ezshiksha from "../../assets/shiksha.png";
 import cryptify from "../../assets/crypto.png";
 import Image, { StaticImageData } from "next/image";
 import python from "../../assets/cosmic.png";
-import shop from "../../assets/ShopHere.png"
+import shop from "../../assets/Screenshot 2025-08-09 022940.png"
 import Contextfirst from "../Theme";
 
 const Projects = () => {
@@ -22,9 +22,9 @@ const Projects = () => {
 
   const projects: Projects[] = [
     {
-      name: "ShopHere",
+      name: "DashCart",
       about:
-        "Shophere is a full-featured MERN stack e-commerce platform with an intuitive admin dashboard, Firebase authentication, Stripe payment integration, and real-time analytics.",
+        "MERN e-commerce platform with admin dashboard, Firebase auth, Stripe payments, Cloudinary storage, CRUD operations, and real-time analytics via Chart.js for efficient user, product, and order management.",
       date: "January 2025",
       code: "https://github.com/TilakRathoure/ShopHere-ecommerce",
       link: "https://dashcartmern.netlify.app/",
@@ -41,10 +41,10 @@ const Projects = () => {
     {
       name: "EzShiksha",
       about:
-        "EzShiksha is transforming education with AI-powered solutions: instant math help, concise notes, and text extraction. Empowering students to learn efficiently, collaborate effectively, and access education universally.",
+        "Transforming education with AI-powered solutions: instant math help, concise notes, and text extraction. Empowering students to learn efficiently, collaborate effectively, and access education universally.",
       date: "September 2024",
       code: "https://github.com/TilakRathoure/EzShiksha",
-      link: "https://github.com/TilakRathoure/EzShiksha",
+      link: "https://ez-shiksha.vercel.app/",
       image:ezshiksha,
       tech: [
         {name:"Python"},
@@ -57,7 +57,7 @@ const Projects = () => {
     {
       name: "Cryptify",
       about:
-        "Cryptify is a React-powered platform offering crypto trading insights, real-time updates, exchange comparisons, and interactive charts for informed decisions.",
+        "React-powered platform offering crypto trading insights, real-time updates, exchange comparisons, and interactive charts for informed decisions.",
       date: "April 2024",
       code: "https://github.com/TilakRathoure/Cryptify",
       link: "https://tilakrathoure.github.io/Cryptify/",
@@ -71,7 +71,7 @@ const Projects = () => {
     {
       name: "Cosmic-Conquest",
       about:
-        "Cosmic Conquest is a fun Python game built with Pygame, where players defend Earth from aliens using a rocket launcher.",
+        "A fun Python game built with Pygame, where players defend Earth from aliens using a rocket launcher.",
       date: "March 2024",
       code: "https://github.com/TilakRathoure/Cosmic-Conquest",
       link: "https://github.com/TilakRathoure/Cosmic-Conquest",
@@ -89,7 +89,7 @@ const Projects = () => {
         Projects{" "}
         <span>
           <a href="https://github.com/TilakRathoure">
-          <FaGithubSquare />
+          <FaGithubSquare size={30} />
           </a>
         </span>
       </h1>

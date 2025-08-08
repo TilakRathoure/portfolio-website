@@ -14,7 +14,7 @@ const Experience = () => {
         first:
           "- Gained hands-on experience with React, Redux, TypeScript, Nodejs and API integration.",
         second:
-          "- Built an e-commerce site with state management and authentication, collaborating with peers to solve problems.",
+          "- Built several projects including an e-commerce site with state management and authentication, collaborated with peers to solve problems.",
       },
     },
   ];

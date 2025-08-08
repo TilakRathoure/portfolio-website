@@ -32,7 +32,7 @@ const Header = () => {
       <div>
         <h1 className="font-normal text-xl">About</h1>
         <p className="font-extralight text-lg">
-          Third-year B.Tech CSE (AI) student and <span className=" font-medium">Full-stack Developer</span>, building dynamic web apps with AI-powered features.
+          B.Tech CSE (AI) student and <span className=" font-medium">Full-stack Developer</span>, building dynamic web apps with AI-powered features.
         </p>
       </div>
 

@@ -4,7 +4,7 @@ import React, { FormEvent } from "react";
 import { IconType } from "react-icons";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaSquareTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 
 type Icon = {
@@ -21,14 +21,14 @@ const icons: Icon[] = [
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/tilakrathoure",
   },
+    {
+    icon: FaXTwitter,
+    link: "https://x.com/TilakRathoure",
+  },
   {
     icon: FaSquareInstagram,
     link: "https://www.instagram.com/tilakrathoure",
-  },
-  {
-    icon: FaSquareTwitter,
-    link: "https://x.com/TilakRathoure",
-  },
+  }
 ];
 
 const Contactform = () => {
