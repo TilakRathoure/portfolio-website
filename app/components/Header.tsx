@@ -43,7 +43,7 @@ const Header = () => {
             <MdArrowOutward />
           </span>
         </a>
-        <a target="_blank" href="https://drive.google.com/file/d/1P_V9VYhL0YXHcXd5RCjhlY94pvPXFFkT/view?usp=drive_link">
+        <a target="_blank" href="https://drive.google.com/file/d/11_ZwCnNeVxjoOmzOxyHKnzyWdAdUThq3/view?usp=sharing">
           <span className={`${mode==="dark"? "bg-black" :"bg-white" } flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap`}>
             my resume
             <HiDownload />

@@ -27,7 +27,7 @@ const Projects = () => {
         "Shophere is a full-featured MERN stack e-commerce platform with an intuitive admin dashboard, Firebase authentication, Stripe payment integration, and real-time analytics.",
       date: "January 2025",
       code: "https://github.com/TilakRathoure/ShopHere-ecommerce",
-      link: "https://shopheremern.netlify.app/",
+      link: "https://dashcartmern.netlify.app/",
       image: shop,
       tech: [
         { name: "Typescript" },
