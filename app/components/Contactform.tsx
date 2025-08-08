@@ -84,7 +84,7 @@ const Contactform = () => {
       <h1 className="relative text-xl my-8 mb-[70px]">
         <div className="absolute -right-[130px] sm:-right-[170px] top-[50px] flex gap-2">
           {icons.map((e, i) => (
-            <a href={e.link} key={i}>
+            <a href={e.link} key={i} target="_blank">
             <e.icon size={30} />
             </a>
           ))}

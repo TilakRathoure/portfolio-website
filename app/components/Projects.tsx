@@ -4,12 +4,11 @@ import ezshiksha from "../../assets/shiksha.png";
 import cryptify from "../../assets/crypto.png";
 import Image, { StaticImageData } from "next/image";
 import python from "../../assets/cosmic.png";
-import shop from "../../assets/Screenshot 2025-08-09 022940.png"
+import shop from "../../assets/Screenshot 2025-08-09 022940.png";
 import Contextfirst from "../Theme";
 
 const Projects = () => {
-
-  const {mode}= useContext(Contextfirst)!;
+  const { mode } = useContext(Contextfirst)!;
   interface Projects {
     name: string;
     about: string;
@@ -33,9 +32,9 @@ const Projects = () => {
         { name: "Typescript" },
         { name: "React" },
         { name: "Firebase" },
-        {name:"Stripe"},
+        { name: "Stripe" },
         { name: "MongoDB" },
-        {name: "Redux Toolkit"}
+        { name: "Redux Toolkit" },
       ],
     },
     {
@@ -45,9 +44,9 @@ const Projects = () => {
       date: "September 2024",
       code: "https://github.com/TilakRathoure/EzShiksha",
       link: "https://ez-shiksha.vercel.app/",
-      image:ezshiksha,
+      image: ezshiksha,
       tech: [
-        {name:"Python"},
+        { name: "Python" },
         { name: "React" },
         { name: "MongoDB" },
         { name: "ExpressJs" },
@@ -76,10 +75,7 @@ const Projects = () => {
       code: "https://github.com/TilakRathoure/Cosmic-Conquest",
       link: "https://github.com/TilakRathoure/Cosmic-Conquest",
       image: python,
-      tech: [
-        { name: "Python" },
-        { name: "pygame" },
-      ],
+      tech: [{ name: "Python" }, { name: "pygame" }],
     },
   ];
 
@@ -88,28 +84,54 @@ const Projects = () => {
       <h1 className="text-[20px] flex items-center gap-5 text-center mb-4">
         Projects{" "}
         <span>
-          <a href="https://github.com/TilakRathoure">
-          <FaGithubSquare size={30} />
+          <a target="_blank" href="https://github.com/TilakRathoure">
+            <FaGithubSquare size={30} />
           </a>
         </span>
       </h1>
       <div className="flex justify-center gap-5 mb-0 flex-wrap w-full">
         {projects.map((e, i) => (
-          <a key={i} href={e.link} className={`${mode==="light"? ("") : (" shadow-slate-700")} shadow-lg rounded-lg w-full sm:w-[48%] pb-2 max-w-[421px]`}>
+          <a target="_blank"
+            key={i}
+            href={e.link}
+            className={`${
+              mode === "light" ? "" : " shadow-slate-700"
+            } shadow-lg rounded-lg w-full sm:w-[48%] pb-2 max-w-[421px]`}
+          >
             <Image
               src={e.image}
               className="w-full object-cover lg:object-top rounded-lg"
               alt="projects"
             />
             <div className="flex flex-col gap-3 w-full p-3">
-              <h1 className="relative">{e.name}<p className="absolute right-0 top-0 font-extralight">{e.date}</p></h1>
+              <h1 className="relative">
+                {e.name}
+                <p className="absolute right-0 top-0 font-extralight">
+                  {e.date}
+                </p>
+              </h1>
               <p className="font-light">{e.about}</p>
               <div className="flex gap-2 flex-wrap">
                 {e.tech.map((e, i) => (
-                  <div key={i} className={` text-sm font-extralight rounded-lg px-2  ${mode!="dark"? "bg-gray-200" :"bg-gray-700"}`}>
+                  <div
+                    key={i}
+                    className={` text-sm font-extralight rounded-lg px-2  ${
+                      mode != "dark" ? "bg-gray-200" : "bg-gray-700"
+                    }`}
+                  >
                     {e.name}
                   </div>
                 ))}
+              </div>
+              <div className="w-full flex justify-end gap-3">
+                <a href={e.link} target="_blank">
+                  Live Demo
+                </a>
+                {e.name !== "Cosmic-Conquest" && (
+                  <a href={e.code} target="_blank">
+                    View Code
+                  </a>
+                )}
               </div>
             </div>
           </a>
