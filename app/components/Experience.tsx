@@ -1,8 +1,15 @@
-import React from "react";
-import Image from "next/image";
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import devslane from "../../assets/devslane_logo.jpg";
+import Image from "next/image";
 
 const Experience = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   const educationDetails = [
     {
       img: devslane,
@@ -10,12 +17,11 @@ const Experience = () => {
       duration: "Jun 2024 - Aug 2024",
       institution: "DevsLane",
       description: "Fullstack Developer Trainee",
-      additional: {
-        first:
-          "- Gained hands-on experience with React, Redux, TypeScript, Nodejs and API integration.",
-        second:
-          "- Built several projects including an e-commerce site with state management and authentication, collaborated with peers to solve problems.",
-      },
+      additional: [
+        "Selected on-campus as Full-Stack Developer Trainee; gained hands-on experience in React, Redux, TypeScript, Node.js, Tailwind CSS & RESTful APIs",
+        "Delivered 2 major and 5 minor projects, including a scalable e-commerce platform with auth & state management",
+        "Collaborated with 50+ peers to debug, solve issues, and enhance coding skills.",
+      ],
     },
   ];
 
@@ -24,27 +30,45 @@ const Experience = () => {
       <h1 className="text-[22px] py-3">Experience</h1>
       <div className="flex flex-col gap-6">
         {educationDetails.map((edu, index) => (
-          <div key={index}>
-            <a href="https://devslane.com">
-            <div className="flex items-center gap-3">
-              <Image
-                src={edu.img}
-                className="h-[45px] w-[37px]"
-                alt={edu.alt}
-              />
-              <div className="relative w-full">
-                <p className="absolute top-0 right-0 font-extralight">
-                  {edu.duration}
-                </p>
-                <p className="text-lg">{edu.institution}</p>
-                <span className="font-extralight">{edu.description} </span>
-              </div>
-            </div>
-            </a>
-            <div className="ml-16 font-extralight">
-                <div> {edu.additional.first}</div>
-                <div> {edu.additional.second}</div>
+          <div
+            key={index}
+            className="rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm"
+          >
+            <button
+              onClick={() => toggle(index)}
+              className="w-full flex items-center justify-between px-4 py-3 text-left font-medium text-gray-900 dark:text-gray-100"
+            >
+              <div className="flex items-center gap-3">
+                <Image
+                  alt="company"
+                  src={edu.img}
+                  className="h-9 w-9 object-cover"
+                />
+                <div>
+                  <div>{edu.institution}</div>
+                  <div className="font-normal">{edu.description}</div>
                 </div>
+              </div>
+              <ChevronDown
+                className={`h-5 w-5 transform transition-transform duration-300 ${
+                  openIndex === index ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {/* Animated content */}
+            <div
+              className={`px-4 text-md pl-[60px] transition-all duration-300 overflow-hidden font-extralight ${
+                openIndex === index ? "max-h-[250px] pb-2" : "max-h-0"
+              }`}
+            >
+              {edu.additional.map((e,i) => (
+                <div key={i} className="flex gap-2 items-center justify-start">
+                  <p className="self-start">-</p>
+                  <p>{e}</p>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
