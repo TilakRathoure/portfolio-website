@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
-import image1 from "../../assets/1692212262791-removebg-preview-removebg-preview.png";
+import image1 from "../../assets/WhatsApp_Image_2025-08-24_at_20.30.36_88736715-removebg-preview.png";
 import { HiDownload } from "react-icons/hi";
 import { useContext } from "react";
 import Contextfirst from "../Theme";
@@ -25,7 +25,7 @@ const Header = () => {
         <Image
           src={image1}
           alt=""
-          className="rounded-full w-[120px] sm:max-h-[140px] sm:min-w-[140px] sm:w-[140px]"
+          className="rounded-full w-[120px] sm:max-h-[140px] sm:min-w-[140px] sm:w-[140px] border-2 object-cover"
         />
       </div>
 
@@ -43,7 +43,7 @@ const Header = () => {
             <MdArrowOutward />
           </span>
         </a>
-        <a target="_blank" href="https://drive.google.com/file/d/11_ZwCnNeVxjoOmzOxyHKnzyWdAdUThq3/view?usp=sharing">
+        <a target="_blank" href="https://drive.google.com/file/d/1_O2CpzlxBW_zQmf5s9gRjIPK9dnXgW7I/view?usp=sharing">
           <span className={`${mode==="dark"? "bg-black" :"bg-white" } flex items-center justify-center shadow-md rounded-3xl px-4 cursor-pointer text-lg py-2 text-nowrap`}>
             my resume
             <HiDownload />

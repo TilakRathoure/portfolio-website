@@ -17,6 +17,7 @@ const Experience = () => {
       duration: "Jun 2024 - Aug 2024",
       institution: "DevsLane",
       description: "Fullstack Developer Trainee",
+      link: "https://devslane.com/",
       additional: [
         "Selected on-campus as Full-Stack Developer Trainee; gained hands-on experience in React, Redux, TypeScript, Node.js, Tailwind CSS & RESTful APIs",
         "Delivered 2 major and 5 minor projects, including a scalable e-commerce platform with auth & state management",
@@ -39,11 +40,13 @@ const Experience = () => {
               className="w-full flex items-center justify-between px-4 py-3 text-left font-medium text-gray-900 dark:text-gray-100"
             >
               <div className="flex items-center gap-3">
-                <Image
-                  alt="company"
-                  src={edu.img}
-                  className="h-9 w-9 object-cover"
-                />
+                <a href={edu.link} target="_blank">
+                  <Image
+                    alt="company"
+                    src={edu.img}
+                    className="h-9 w-9 object-cover"
+                  />
+                </a>
                 <div>
                   <div>{edu.institution}</div>
                   <div className="font-normal">{edu.description}</div>
@@ -62,7 +65,7 @@ const Experience = () => {
                 openIndex === index ? "max-h-[250px] pb-2" : "max-h-0"
               }`}
             >
-              {edu.additional.map((e,i) => (
+              {edu.additional.map((e, i) => (
                 <div key={i} className="flex gap-2 items-center justify-start">
                   <p className="self-start">-</p>
                   <p>{e}</p>
