@@ -13,6 +13,7 @@ import Contextfirst from "./Theme";
 
 const Page = () => {
   const [mode, Setmode] = useState<string>("dark");
+  const [image,setImage]=useState<boolean>(false);
 
   useEffect(() => {
     if (mode === "dark") {
@@ -23,7 +24,7 @@ const Page = () => {
   }, [mode]);
 
   return (
-    <Contextfirst.Provider value={{ mode, Setmode }}>
+    <Contextfirst.Provider value={{ mode, Setmode,image,setImage}}>
       <div className="px-4 sm:px-12 xl:px-[200px] bg-white dark:bg-black dark:text-white">
         <Navbar />
         <Header />

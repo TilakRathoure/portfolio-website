@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import devslane from "../../assets/devslane_logo.jpg";
 import Image from "next/image";
+import Contextfirst from "../Theme";
 
 const Experience = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const {setImage}= useContext(Contextfirst)!
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -36,7 +39,7 @@ const Experience = () => {
             className="rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm"
           >
             <button
-              onClick={() => toggle(index)}
+              onClick={() =>{setImage((prev)=>!prev); toggle(index)}}
               className="w-full flex items-center justify-between px-4 py-3 text-left font-medium text-gray-900 dark:text-gray-100"
             >
               <div className="flex items-center gap-3">

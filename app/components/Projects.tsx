@@ -6,6 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import python from "../../assets/cosmic.png";
 import shop from "../../assets/Screenshot 2025-08-09 022940.png";
 import Contextfirst from "../Theme";
+import finuera from "@/assets/finuera.png"
 
 const Projects = () => {
   const { mode } = useContext(Contextfirst)!;
@@ -20,6 +21,16 @@ const Projects = () => {
   }
 
   const projects: Projects[] = [
+    {
+      name: "Finuera",
+      about:
+        "AI finance assistant leveraging Next.js, LLMs, and Vercel AI SDK with an integrated chatbot, delivering real-time insights, multi-format data analysis, and interactive dashboards with secure authentication.",
+      date: "July 2025",
+      code: "https://github.com/TilakRathoure/Finuera",
+      link: "https://finuera.vercel.app/",
+      image: finuera,
+      tech: [{ name: "Next.js" }, { name: "AuthJS" },{name:"LLM"},{name:"GenAI"},{name:"Shadcn UI"},{name:"TypeScript"}],
+    },
     {
       name: "DashCart",
       about:
@@ -91,7 +102,8 @@ const Projects = () => {
       </h1>
       <div className="flex justify-center gap-5 mb-0 flex-wrap w-full">
         {projects.map((e, i) => (
-          <a target="_blank"
+          <a
+            target="_blank"
             key={i}
             href={e.link}
             className={`${
