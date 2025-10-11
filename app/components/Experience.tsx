@@ -7,7 +7,7 @@ import Contextfirst from "../Theme";
 const Experience = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const {setImage}= useContext(Contextfirst)!
+  const { setImage } = useContext(Contextfirst)!;
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -36,10 +36,13 @@ const Experience = () => {
         {educationDetails.map((edu, index) => (
           <div
             key={index}
-            className="rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm"
+            className="rounded-2xl border border-gray-300 dark:border-gray-700 shadow-sm"
           >
             <button
-              onClick={() =>{setImage((prev)=>!prev); toggle(index)}}
+              onClick={() => {
+                setImage((prev) => !prev);
+                toggle(index);
+              }}
               className="w-full flex items-center justify-between px-4 py-3 text-left font-medium text-gray-900 dark:text-gray-100"
             >
               <div className="flex items-center gap-3">
