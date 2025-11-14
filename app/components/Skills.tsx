@@ -6,8 +6,9 @@ import {
   FaPython,
   FaGitAlt,
   FaGithub,
+  FaDocker,
 } from "react-icons/fa";
-import { IoLogoJavascript,IoLogoFirebase } from "react-icons/io5";
+import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiExpress,
@@ -16,6 +17,7 @@ import {
   SiRedux,
   SiTypescript,
   SiShadcnui,
+  SiFastapi,
 } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 
@@ -26,32 +28,33 @@ const Skills = () => {
     color: string; // New color property
   }
 
-const skills: Skill[] = [
-  // 🔹 Frontend
-  { name: "Nextjs", icon: RiNextjsFill, color: "" },
-  { name: "React", icon: FaReact, color: "text-sky-400" },
-  { name: "Redux", icon: SiRedux, color: "text-purple-600" },
-  { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "text-teal-400" },
-  { name: "Shadcn UI", icon: SiShadcnui, color: "" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-  { name: "JavaScript", icon: IoLogoJavascript, color: "text-yellow-500" },
+  const skills: Skill[] = [
+    // 🔹 Frontend
+    { name: "Nextjs", icon: RiNextjsFill, color: "" },
+    { name: "React", icon: FaReact, color: "text-sky-400" },
+    { name: "Redux", icon: SiRedux, color: "text-purple-600" },
+    { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "text-teal-400" },
+    { name: "Shadcn UI", icon: SiShadcnui, color: "" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+    { name: "JavaScript", icon: IoLogoJavascript, color: "text-yellow-500" },
 
-  // 🔹 Backend & Databases
-  { name: "NodeJS", icon: FaNodeJs, color: "text-green-700" },
-  { name: "Express.js", icon: SiExpress, color: "" },
-  { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
-  { name: "Firebase", icon: IoLogoFirebase, color: "text-orange-500" },
+    // 🔹 Backend & Databases
+    { name: "NodeJS", icon: FaNodeJs, color: "text-green-700" },
+    { name: "Express.js", icon: SiExpress, color: "" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+    { name: "Firebase", icon: IoLogoFirebase, color: "text-orange-500" },
 
-  // 🔹 Programming Languages
-  { name: "C++", icon: TbBrandCpp, color: "text-blue-700" },
-  { name: "Python", icon: FaPython, color: "text-blue-500" },
+    // 🔹 Programming Languages
+    { name: "C++", icon: TbBrandCpp, color: "text-blue-700" },
+    { name: "Python", icon: FaPython, color: "text-blue-500" },
 
-  // 🔹 Tools & DevOps
-  { name: "Git", icon: FaGitAlt, color: "text-red-600" },
-  { name: "GitHub", icon: FaGithub, color: "" },
-  { name: "Postman", icon: SiPostman, color: "text-orange-500" },
-];
-
+    // 🔹 Tools & DevOps
+    { name: "Git", icon: FaGitAlt, color: "text-red-600" },
+    { name: "GitHub", icon: FaGithub, color: "" },
+    { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+    { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+    { name: "FastAPI", icon: SiFastapi, color: "text-teal-600" },
+  ];
 
   return (
     <div className="m-4" id="skills">

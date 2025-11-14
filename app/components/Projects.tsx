@@ -6,7 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import python from "../../assets/cosmic.png";
 import shop from "../../assets/Screenshot 2025-08-09 022940.png";
 import Contextfirst from "../Theme";
-import finuera from "@/assets/finuera.png"
+import finuera from "@/assets/finuera.png";
 
 const Projects = () => {
   const { mode } = useContext(Contextfirst)!;
@@ -29,7 +29,14 @@ const Projects = () => {
       code: "https://github.com/TilakRathoure/Finuera",
       link: "https://finuera.vercel.app/",
       image: finuera,
-      tech: [{ name: "Next.js" }, { name: "AuthJS" },{name:"LLM"},{name:"GenAI"},{name:"Shadcn UI"},{name:"TypeScript"}],
+      tech: [
+        { name: "Next.js" },
+        { name: "AuthJS" },
+        { name: "LLM" },
+        { name: "GenAI" },
+        { name: "Shadcn UI" },
+        { name: "TypeScript" },
+      ],
     },
     {
       name: "DashCart",
@@ -136,14 +143,14 @@ const Projects = () => {
                 ))}
               </div>
               <div className="w-full flex justify-end gap-3">
-                <a href={e.link} target="_blank">
-                  Live Demo
-                </a>
                 {e.name !== "Cosmic-Conquest" && (
-                  <a href={e.code} target="_blank">
-                    View Code
+                  <a href={e.link} target="_blank">
+                    Live Demo
                   </a>
                 )}
+                <a href={e.code} target="_blank">
+                  View Code
+                </a>
               </div>
             </div>
           </a>

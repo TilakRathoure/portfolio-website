@@ -62,7 +62,7 @@ const Navbar = () => {
         <ul
           className={`hidden ${
             mode === "dark" ? "text-white bg-black" : "text-black bg-white"
-          } sm:flex justify-between items-center shadow-md rounded-3xl`}
+          } sm:flex justify-between items-center shadow-md rounded-3xl dark:shadow-sm dark:shadow-gray-300`}
         >
           {Header.map((e, i) => (
             <a

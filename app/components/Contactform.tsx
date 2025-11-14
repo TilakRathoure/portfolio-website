@@ -5,7 +5,6 @@ import { IconType } from "react-icons";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaSquareInstagram } from "react-icons/fa6";
 
 type Icon = {
   icon: IconType;
@@ -21,18 +20,13 @@ const icons: Icon[] = [
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/tilakrathoure",
   },
-    {
+  {
     icon: FaXTwitter,
     link: "https://x.com/TilakRathoure",
   },
-  {
-    icon: FaSquareInstagram,
-    link: "https://www.instagram.com/tilakrathoure",
-  }
 ];
 
 const Contactform = () => {
-
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event: FormEvent) => {
@@ -48,10 +42,11 @@ const Contactform = () => {
       // Send the formData directly to the API
       const { data } = await axios.post(
         "https://api.web3forms.com/submit",
-        formData,{
-          headers:{
-            "Content-Type":"multipart/form-data"
-          }
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         }
       );
 
@@ -85,13 +80,13 @@ const Contactform = () => {
         <div className="absolute -right-[130px] sm:-right-[170px] top-[50px] flex gap-2">
           {icons.map((e, i) => (
             <a href={e.link} key={i} target="_blank">
-            <e.icon size={30} />
+              <e.icon size={30} />
             </a>
           ))}
         </div>
         Get In Touch
       </h1>
-      <form  
+      <form
         onSubmit={onSubmit}
         className="mt-4 relative flex flex-col gap-10 w-full max-w-[670px]"
       >
@@ -102,26 +97,22 @@ const Contactform = () => {
             </p>
 
             <div className="text-black">
-
-            {e.name !== "message" ? (
-              <input
-                className="border-b-[3px] p-1 rounded-lg border-black w-full text-base"
-                name={e.name}
-                type={e.type}
-                required
-              />
-            ) : (
-              <textarea
-                name={e.name}
-                className="border-b-[3px] rounded-lg p-1 border-black w-full text-base"
-                rows={3}
-                required
-              />
-            )}
-
+              {e.name !== "message" ? (
+                <input
+                  className="border-b-[3px] p-1 rounded-lg border-black w-full text-base"
+                  name={e.name}
+                  type={e.type}
+                  required
+                />
+              ) : (
+                <textarea
+                  name={e.name}
+                  className="border-b-[3px] rounded-lg p-1 border-black w-full text-base"
+                  rows={3}
+                  required
+                />
+              )}
             </div>
-
-
           </div>
         ))}
 
