@@ -8,11 +8,14 @@ import {
   FaGithub,
   FaDocker,
 } from "react-icons/fa";
-import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
+import { IoLogoJavascript } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiExpress,
   SiMongodb,
+  SiPostgresql,
+  SiPrisma,
+  SiDrizzle,
   SiPostman,
   SiRedux,
   SiTypescript,
@@ -42,7 +45,9 @@ const Skills = () => {
     { name: "NodeJS", icon: FaNodeJs, color: "text-green-700" },
     { name: "Express.js", icon: SiExpress, color: "" },
     { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
-    { name: "Firebase", icon: IoLogoFirebase, color: "text-orange-500" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "text-sky-700" },
+    { name: "Prisma", icon: SiPrisma, color: "text-teal-500" },
+    { name: "Drizzle", icon: SiDrizzle, color: "text-lime-500" },
 
     // 🔹 Programming Languages
     { name: "C++", icon: TbBrandCpp, color: "text-blue-700" },

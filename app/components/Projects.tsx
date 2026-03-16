@@ -44,7 +44,7 @@ const Projects = () => {
         "MERN e-commerce platform with admin dashboard, Firebase auth, Stripe payments, Cloudinary storage, CRUD operations, and real-time analytics via Chart.js for efficient user, product, and order management.",
       date: "January 2025",
       code: "https://github.com/TilakRathoure/ShopHere-ecommerce",
-      link: "https://dashcartmern.netlify.app/",
+      link: "https://dash-cart-ecommerce.vercel.app/",
       image: shop,
       tech: [
         { name: "Typescript" },

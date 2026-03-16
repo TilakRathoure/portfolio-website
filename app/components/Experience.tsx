@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import devslane from "../../assets/devslane_logo.jpg";
 import Image from "next/image";
 import Contextfirst from "../Theme";
+import suntek from "../../assets/image.png"
 
 const Experience = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -14,6 +15,19 @@ const Experience = () => {
   };
 
   const educationDetails = [
+    {
+      img: suntek,
+      alt: "Suntek AI",
+      duration: "Jan 2026 - Present",
+      institution: "Suntek AI",
+      description: "Fullstack Developer Intern",
+      link: "https://suntek.ai/",
+      additional: [
+        "Revamped a production timesheet system used by 50+ employees, rebuilding the full stack with Next.js, TypeScript, Clerk, and PostgreSQL.",
+        "Migrated 20,000+ legacy records to a new PostgreSQL schema with zero data loss and improved UX, reducing time-entry effort by ~40%.",
+        "Built a client-facing image processing tool with bulk ZIP uploads, integrated Google Cloud processing, and extended Shopify workflows.",
+      ],
+    },
     {
       img: devslane,
       alt: "DevsLane",
@@ -59,17 +73,15 @@ const Experience = () => {
                 </div>
               </div>
               <ChevronDown
-                className={`h-5 w-5 transform transition-transform duration-300 ${
-                  openIndex === index ? "rotate-180" : ""
-                }`}
+                className={`h-5 w-5 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
             {/* Animated content */}
             <div
-              className={`px-4 text-md pl-[60px] transition-all duration-300 overflow-hidden font-extralight ${
-                openIndex === index ? "max-h-[250px] pb-2" : "max-h-0"
-              }`}
+              className={`px-4 text-md pl-[60px] transition-all duration-300 overflow-hidden font-extralight ${openIndex === index ? "max-h-[250px] pb-2" : "max-h-0"
+                }`}
             >
               {edu.additional.map((e, i) => (
                 <div key={i} className="flex gap-2 items-center justify-start">
