@@ -80,7 +80,7 @@ const Experience = () => {
 
             {/* Animated content */}
             <div
-              className={`px-4 text-md pl-[60px] transition-all duration-300 overflow-hidden font-extralight ${openIndex === index ? "max-h-[250px] pb-2" : "max-h-0"
+              className={`px-4 text-md pl-[60px] transition-all duration-300 overflow-hidden font-extralight ${openIndex === index ? " pb-2" : "max-h-0"
                 }`}
             >
               {edu.additional.map((e, i) => (
