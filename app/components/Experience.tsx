@@ -23,10 +23,11 @@ const Experience = () => {
       description: "Fullstack Developer Intern",
       link: "https://suntek.ai/",
       additional: [
-        "Revamped a production timesheet system used by 50+ employees, rebuilding the full stack with Next.js, TypeScript, Clerk, and PostgreSQL.",
-        "Migrated 20,000+ legacy records to a new PostgreSQL schema with zero data loss and improved UX, reducing time-entry effort by ~40%.",
-        "Built a client-facing image processing tool with bulk ZIP uploads, integrated Google Cloud processing, and extended Shopify workflows.",
-      ],
+        "Revamped a revenue-generating Timesheet platform used by 50+ employees, migrating 20,000+ legacy records with zero data loss and integrating Jira and Slack workflows, reducing time-entry effort by 30%.",
+        "Built a Kanban platform for clients, PMs, delivery leads, and admins, centralizing requests, estimations, approvals, blockers, and execution workflows while replacing spreadsheet-based tracking; implemented RBAC and Timesheet visibility for clients.",
+        "Engineered a client-facing image platform enabling secure asset exchange between clients and operations teams, supporting 10+ GB bulk ZIP uploads on Google Cloud.",
+        "Architected and developed 3 production platforms end-to-end, owning frontend, backend, database design, authentication, and authorization using Next.js, TypeScript, PostgreSQL, Prisma/Drizzle, and Clerk."
+      ]
     },
     {
       img: devslane,
