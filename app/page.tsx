@@ -9,6 +9,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
+import ResearchPaper from "./components/ResearchPaper";
 import Contextfirst from "./Theme";
 
 const Page = () => {
@@ -29,6 +30,7 @@ const Page = () => {
         <Navbar />
         <Header />
         <Experience />
+        <ResearchPaper />
         <Skills />
         <Projects />
         <Education />

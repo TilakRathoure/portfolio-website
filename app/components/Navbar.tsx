@@ -15,6 +15,7 @@ interface header {
 const Header: header[] = [
   { title: "Home", href: "#home" },
   { title: "Experience", href: "#experience" },
+  { title: "Publications", href: "#publications" },
   { title: "Skills", href: "#skills" },
   { title: "Projects", href: "#projects" },
   { title: "Education", href: "#education" },
