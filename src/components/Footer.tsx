@@ -16,7 +16,17 @@ const Footer = () => {
             tilakrathoure@gmail.com
           </a>
         </div>
-        <p className="text-sm text-muted font-light">Made with Next.js</p>
+        <div className="flex flex-col sm:items-end gap-2 text-sm text-muted font-light">
+          <p>Made with Next.js</p>
+          <a
+            href="https://github.com/TilakRathoure/portfolio-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-accent"
+          >
+            View source on GitHub
+          </a>
+        </div>
       </div>
     </footer>
   );
