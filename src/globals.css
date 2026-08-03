@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f3ee;
+  --foreground: #1c1917;
+  --accent: #b45309;
+  --muted: #78716c;
+  --border: #e8e0d6;
+  --surface: #efe8df;
+  --glow: rgba(180, 83, 9, 0.12);
+  --glow-secondary: rgba(120, 80, 40, 0.08);
+}
+
+.dark {
+  --background: #14110f;
+  --foreground: #f5f0e8;
+  --accent: #e8b86d;
+  --muted: #a8a29e;
+  --border: #2a2420;
+  --surface: #1c1815;
+  --glow: rgba(232, 184, 109, 0.1);
+  --glow-secondary: rgba(180, 120, 60, 0.06);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-outfit), sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.page-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 15% -10%, var(--glow), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 20%, var(--glow-secondary), transparent 50%),
+    radial-gradient(ellipse 50% 30% at 50% 100%, var(--glow), transparent 60%),
+    var(--background);
+}
+
+#home,
+#skills,
+#projects,
+#education,
+#contact,
+#experience,
+#publications {
+  scroll-margin-top: 100px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.section-title {
+  font-family: var(--font-ovo), serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.35rem;
+}
+
+.section-support {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+  max-width: 36rem;
+}
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: inherit;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: var(--foreground);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+  left: 0;
+  transform: none;
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.8s ease-out both;
+}
+
+.animate-fade-rise-delay {
+  animation: fade-rise 0.8s ease-out 0.15s both;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fade-rise 0.8s ease-out 0.3s both;
+}
