@@ -34,7 +34,7 @@ const Experience = () => {
       alt: "DevsLane",
       duration: "Jun 2024 - Aug 2024",
       institution: "DevsLane",
-      description: "Fullstack Developer Trainee",
+      description: "Software Engineering Trainee",
       link: "https://devslane.com/",
       additional: [
         "Selected on-campus as Full-Stack Developer Trainee; gained hands-on experience in React, Redux, TypeScript, Node.js, Tailwind CSS & RESTful APIs",
