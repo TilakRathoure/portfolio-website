@@ -9,7 +9,7 @@ import SectionReveal from "./SectionReveal";
 import { ExperienceItem } from "@/types";
 
 const Experience = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -89,19 +89,17 @@ const Experience = () => {
                   {edu.duration}
                 </span>
                 <ChevronDown
-                  className={`h-5 w-5 text-muted transform transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 text-muted transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                    }`}
                 />
               </div>
             </button>
 
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index
+              className={`overflow-hidden transition-all duration-300 ${openIndex === index
                   ? "max-h-[800px] opacity-100 mt-3"
                   : "max-h-0 opacity-0"
-              }`}
+                }`}
               aria-hidden={openIndex !== index}
             >
               <ul className="space-y-2.5 pl-12">

@@ -81,6 +81,7 @@ const Navbar = () => {
             <button
               type="button"
               aria-label="Open menu"
+              aria-expanded={side}
               onClick={() => Setside(true)}
               className="md:hidden cursor-pointer p-1"
             >
@@ -101,38 +102,42 @@ const Navbar = () => {
       {/* spacer for fixed nav */}
       <div className="h-[5.5rem]" />
 
-      {side && (
-        <>
-          <button
-            type="button"
-            aria-label="Close menu overlay"
-            className="fixed inset-0 z-50 bg-foreground/20 backdrop-blur-sm md:hidden"
-            onClick={() => Setside(false)}
-          />
-          <ul className="fixed right-0 top-0 z-[60] flex h-full w-[min(80vw,20rem)] flex-col gap-5 bg-background px-8 pt-24 shadow-xl md:hidden animate-fade-rise">
-            <button
-              type="button"
-              aria-label="Close menu"
-              onClick={() => Setside(false)}
-              className="absolute top-7 right-5 cursor-pointer"
-            >
-              <RxCross2 size={28} />
-            </button>
-            {navItems.map((item) => (
-              <li key={item.href} onClick={() => Setside(false)}>
-                <a href={item.href} className="text-xl underline-hover">
-                  {item.title}
-                </a>
-              </li>
-            ))}
-            <li onClick={() => Setside(false)}>
-              <a href="#contact" className="text-xl underline-hover">
-                Contact
+      <button
+        type="button"
+        aria-label="Close menu overlay"
+        className={`fixed inset-0 z-50 bg-foreground/20 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+          side ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={() => Setside(false)}
+      />
+      <ul
+        aria-hidden={!side}
+        inert={!side}
+        className={`fixed right-0 top-0 z-[60] flex h-full w-[min(80vw,20rem)] flex-col gap-5 bg-background px-8 pt-24 shadow-xl transition-transform duration-300 ease-out md:hidden ${
+          side ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          type="button"
+          aria-label="Close menu"
+          onClick={() => Setside(false)}
+          className="absolute top-7 right-5 cursor-pointer"
+        >
+          <RxCross2 size={28} />
+        </button>
+        {navItems.map((item) => (
+          <li key={item.href} onClick={() => Setside(false)}>
+            <a href={item.href} className="text-xl underline-hover">
+              {item.title}
+            </a>
+          </li>
+        ))}
+        <li onClick={() => Setside(false)}>
+          <a href="#contact" className="text-xl underline-hover">
+            Contact
               </a>
-            </li>
-          </ul>
-        </>
-      )}
+        </li>
+      </ul>
     </nav>
   );
 };
