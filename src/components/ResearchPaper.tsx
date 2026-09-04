@@ -37,7 +37,7 @@ const ResearchPaper = () => {
     <SectionReveal id="publications" className="section-block">
       <h2 className="section-title">Publications</h2>
       <p className="section-support">
-        Research exploring generative models and image translation.
+        Selected academic writing and peer-reviewed work.
       </p>
 
       <div className="relative border-l border-border ml-3 sm:ml-4">
@@ -90,10 +90,9 @@ const ResearchPaper = () => {
                 {paper.points.map((point, i) => (
                   <li
                     key={i}
-                    className="flex gap-2.5 text-[0.95rem] font-light leading-relaxed text-foreground/90"
+                    className="text-[0.95rem] font-light leading-relaxed text-foreground/90"
                   >
-                    <span className="text-accent mt-1.5 shrink-0">–</span>
-                    <span>{point}</span>
+                    {point}
                   </li>
                 ))}
               </ul>
