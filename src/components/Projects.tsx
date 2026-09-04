@@ -8,10 +8,26 @@ import Image from "next/image";
 import python from "@/assets/cosmic.png";
 import shop from "@/assets/Screenshot 2025-08-09 022940.png";
 import finuera from "@/assets/finuera.png";
+import xclone from "@/assets/xclone.png";
 import SectionReveal from "./SectionReveal";
 import { Project } from "@/types";
 
 const projects: Project[] = [
+  {
+    name: "XClone",
+    about:
+      "A pixel-inspired X (Twitter) clone with a three-column layout, home feed, compose & reply flows, and core pages like Explore, Notifications, Messages, Profile, and more. Built for a dark “Lights Out” UI that feels close to the real app.",
+    date: "September 2025",
+    code: "https://github.com/TilakRathoure/XClone",
+    link: "https://x-clone-frontend-new.vercel.app/",
+    image: xclone,
+    tech: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+    ],
+  },
   {
     name: "Finuera",
     about:
@@ -105,7 +121,7 @@ const Projects = () => {
         </a>
       </div>
       <p className="section-support">
-        Selected work across AI products, platforms, and experiments.
+        Personal builds across AI, platforms, and experiments.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
