@@ -6,7 +6,7 @@ import ezshiksha from "@/assets/shiksha.png";
 import cryptify from "@/assets/crypto.png";
 import Image from "next/image";
 import python from "@/assets/cosmic.png";
-import shop from "@/assets/Screenshot 2025-08-09 022940.png";
+import shop from "@/assets/dashcart.png";
 import finuera from "@/assets/finuera.png";
 import xclone from "@/assets/xclone.png";
 import SectionReveal from "./SectionReveal";
@@ -14,25 +14,9 @@ import { Project } from "@/types";
 
 const projects: Project[] = [
   {
-    name: "XClone",
-    about:
-      "A pixel-inspired X (Twitter) clone with a three-column layout, home feed, compose & reply flows, and core pages like Explore, Notifications, Messages, Profile, and more. Built for a dark “Lights Out” UI that feels close to the real app.",
-    date: "September 2025",
-    code: "https://github.com/TilakRathoure/XClone",
-    link: "https://x-clone-frontend-new.vercel.app/",
-    image: xclone,
-    tech: [
-      { name: "Next.js" },
-      { name: "React" },
-      { name: "TypeScript" },
-      { name: "Tailwind CSS" },
-    ],
-  },
-  {
     name: "Finuera",
     about:
       "AI finance assistant leveraging Next.js, LLMs, and Vercel AI SDK with an integrated chatbot, delivering real-time insights, multi-format data analysis, and interactive dashboards with secure authentication.",
-    date: "July 2025",
     code: "https://github.com/TilakRathoure/Finuera",
     link: "https://finuera.vercel.app/",
     image: finuera,
@@ -46,10 +30,23 @@ const projects: Project[] = [
     ],
   },
   {
+    name: "XClone",
+    about:
+      "A pixel-inspired X (Twitter) clone with a three-column layout, home feed, compose & reply flows, and core pages like Explore, Notifications, Messages, Profile, and more. Built for a dark “Lights Out” UI that feels close to the real app.",
+    code: "https://github.com/TilakRathoure/XClone",
+    link: "https://x-clone-frontend-new.vercel.app/",
+    image: xclone,
+    tech: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+    ],
+  },
+  {
     name: "DashCart",
     about:
       "MERN e-commerce platform with admin dashboard, Firebase auth, Stripe payments, Cloudinary storage, CRUD operations, and real-time analytics via Chart.js for efficient user, product, and order management.",
-    date: "January 2025",
     code: "https://github.com/TilakRathoure/ShopHere-ecommerce",
     link: "https://dash-cart-ecommerce.vercel.app/",
     image: shop,
@@ -66,7 +63,6 @@ const projects: Project[] = [
     name: "EzShiksha",
     about:
       "Transforming education with AI-powered solutions: instant math help, concise notes, and text extraction. Empowering students to learn efficiently, collaborate effectively, and access education universally.",
-    date: "September 2024",
     code: "https://github.com/TilakRathoure/EzShiksha",
     link: "https://ez-shiksha.vercel.app/",
     image: ezshiksha,
@@ -82,9 +78,8 @@ const projects: Project[] = [
     name: "Cryptify",
     about:
       "React-powered platform offering crypto trading insights, real-time updates, exchange comparisons, and interactive charts for informed decisions.",
-    date: "April 2024",
     code: "https://github.com/TilakRathoure/Cryptify",
-    link: "https://tilakrathoure.github.io/Cryptify/",
+    link: "https://cryptify-react.vercel.app/",
     image: cryptify,
     tech: [
       { name: "React" },
@@ -96,7 +91,6 @@ const projects: Project[] = [
     name: "Cosmic-Conquest",
     about:
       "A fun Python game built with Pygame, where players defend Earth from aliens using a rocket launcher.",
-    date: "March 2024",
     code: "https://github.com/TilakRathoure/Cosmic-Conquest",
     link: "https://github.com/TilakRathoure/Cosmic-Conquest",
     image: python,
@@ -142,12 +136,7 @@ const Projects = () => {
                 alt={project.name}
               />
             </a>
-            <div className="flex items-baseline justify-between gap-3 mb-2">
-              <h3 className="font-ovo text-xl">{project.name}</h3>
-              <span className="text-sm text-muted font-light whitespace-nowrap">
-                {project.date}
-              </span>
-            </div>
+            <h3 className="font-ovo text-xl mb-2">{project.name}</h3>
             <p className="font-light text-[0.95rem] leading-relaxed text-foreground/85 mb-3">
               {project.about}
             </p>

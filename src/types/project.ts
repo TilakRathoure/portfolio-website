@@ -9,7 +9,6 @@ export interface Project {
   about: string;
   code: string;
   link: string;
-  date: string;
   image: StaticImageData;
   tech: ProjectTech[];
 }
