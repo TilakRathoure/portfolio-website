@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Tilak Rathoure",
   description: "Portfolio",
   icons: {
-    icon: "/letter-t.png",
+    icon: "/profile-icon.png",
   },
 };
 
